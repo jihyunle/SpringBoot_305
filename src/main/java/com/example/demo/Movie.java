@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -11,6 +13,7 @@ public class Movie {
     private String title;
     private long year;
     private String description;
+
     @ManyToMany
     private Set<Actor> cast;
     /* ...the Movie class contains a data member for cast of type Set<Actor>

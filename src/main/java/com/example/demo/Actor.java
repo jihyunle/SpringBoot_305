@@ -10,8 +10,10 @@ public class Actor {
     private long id;
     private String name;
     private String realname;
+
     @ManyToMany(mappedBy = "cast") // this annotation points back to the Movie class... (see Movie class)
     private Set<Movie> movies;
+
 
     public long getId() {
         return id;
@@ -44,4 +46,5 @@ public class Actor {
     public void setMovies(Set<Movie> movies) {
         this.movies = movies;
     }
+
 }

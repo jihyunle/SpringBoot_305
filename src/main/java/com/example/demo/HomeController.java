@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -17,15 +19,19 @@ public class HomeController {
     @Autowired
     MovieRepository movieRepository;
 
+    Actor actor = new Actor();
+
+    Movie movie = new Movie();
+
     @RequestMapping("/")
     public String index(Model model){
         // create an actor
-        Actor actor = new Actor();
+//        Actor actor = new Actor();
         actor.setName("Sandra Bullock");
         actor.setRealname("Sandra Mae Bullowski");
 
         // create a movie
-        Movie movie = new Movie();
+//        Movie movie = new Movie();
         movie.setTitle("Emoji Movie");
         movie.setYear(2017);
         movie.setDescription("About Emojis...");
@@ -35,6 +41,7 @@ public class HomeController {
         movies.add(movie);
 
         // add list of movies to actor's movie list
+//        actor.setMovies(movies);
         actor.setMovies(movies);
 
         // save the actor to the database
