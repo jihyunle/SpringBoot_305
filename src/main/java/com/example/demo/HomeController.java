@@ -40,6 +40,9 @@ public class HomeController {
         // save the actor to the database
         actorRepository.save(actor);
 
+        // save the movie to the database
+        movieRepository.save(movie);
+
         // grab all the actors from the database and send them to the template
         model.addAttribute("actors", actorRepository.findAll());
 
