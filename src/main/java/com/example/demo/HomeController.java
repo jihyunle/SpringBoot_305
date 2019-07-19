@@ -37,12 +37,12 @@ public class HomeController {
         movie.setDescription("About Emojis...");
 
         // add the movie to an empty list
-        Set<Movie> movies = new HashSet<Movie>();
-        movies.add(movie);
+//        Set<Movie> movies = new HashSet<Movie>();
+//        movies.add(movie);
 
         // add list of movies to actor's movie list
 //        actor.setMovies(movies);
-        actor.setMovies(movies);
+//        actor.setMovies(movies);
 
         // save the actor to the database
         actorRepository.save(actor);

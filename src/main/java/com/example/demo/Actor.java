@@ -11,8 +11,19 @@ public class Actor {
     private String name;
     private String realname;
 
-    @ManyToMany(mappedBy = "cast") // this annotation points back to the Movie class... (see Movie class)
-    private Set<Movie> movies;
+//    @ManyToMany(mappedBy = "cast") // this annotation points back to the Movie class... (see Movie class)
+//    private Set<Movie> movies;
+
+
+//    private Set<Actor_Movie> actor_movies;
+//
+//    public Set<Actor_Movie> getActor_movies() {
+//        return actor_movies;
+//    }
+//
+//    public void setActor_movies(Set<Actor_Movie> actor_movies) {
+//        this.actor_movies = actor_movies;
+//    }
 
 
     public long getId() {
@@ -39,12 +50,12 @@ public class Actor {
         this.realname = realname;
     }
 
-    public Set<Movie> getMovies() {
-        return movies;
-    }
-
-    public void setMovies(Set<Movie> movies) {
-        this.movies = movies;
-    }
+//    public Set<Movie> getMovies() {
+//        return movies;
+//    }
+//
+//    public void setMovies(Set<Movie> movies) {
+//        this.movies = movies;
+//    }
 
 }

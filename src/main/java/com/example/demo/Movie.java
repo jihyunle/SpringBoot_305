@@ -12,11 +12,23 @@ public class Movie {
     private long year;
     private String description;
 
-    @ManyToMany
-    private Set<Actor> cast;
+//    @ManyToMany
+//    private Set<Actor> cast;
     /* ...the Movie class contains a data member for cast of type Set<Actor>
     * This links the two together.
     * When a db is created it will contain movie, actor and movie_actor*/
+
+
+//    private Set<Actor_Movie> actor_movies;
+//
+//    public Set<Actor_Movie> getActor_movies() {
+//        return actor_movies;
+//    }
+//
+//    public void setActor_movies(Set<Actor_Movie> actor_movies) {
+//        this.actor_movies = actor_movies;
+//    }
+
 
     public long getId() {
         return id;
@@ -50,12 +62,11 @@ public class Movie {
         this.description = description;
     }
 
-
-    public Set<Actor> getCast() {
-        return cast;
-    }
-
-    public void setCast(Set<Actor> cast) {
-        this.cast = cast;
-    }
+//    public Set<Actor> getCast() {
+//        return cast;
+//    }
+//
+//    public void setCast(Set<Actor> cast) {
+//        this.cast = cast;
+//    }
 }
